@@ -1,6 +1,6 @@
 # Basic
 title = "GoFolio"
-baseURL = "https://vno-hugo.netlify.app/"
+baseURL = ""
 theme = "vno-hugo"
 
 # Pagination
