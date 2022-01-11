@@ -30,7 +30,7 @@ welcomeMessage = "Te la metieeeron!"
 coverColor = ""
 
 [params.comment]
-disqus = "vno-hugo"
+disqus = "blackphillipblog"
 duoshuo = ""
 
 # Take a look on https://github.com/gitalk/gitalk#usage for more info.
