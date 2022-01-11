@@ -1,6 +1,6 @@
 # Basic
 title = "BlackPhillip"
-baseURL = ""
+baseURL = "https://blackphillip.netlify.app"
 theme = "vno-hugo"
 
 # Pagination
