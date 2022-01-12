@@ -22,7 +22,7 @@ paginatePath = "page"
 
 [params]
 author = "A94"
-subtitle = "A blog-orientation theme for Hugo"
+subtitle = "As above, so below"
 description = "Vno Hugo is a port of Vno Jekyll."
 welcomeMessage = "Te la metieeeron!"
 

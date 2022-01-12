@@ -6,15 +6,28 @@
 
           <a href="/#home" title="{{ .Site.Title }}" class="blog-button"><img src="/images/avatar.jpg" width="180" alt="{{ .Site.Title }} logo" class="panel-cover__logo logo" /></a>
           <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for {{ .Site.Title }}" class="blog-button">{{ .Site.Title }}</a></h1>
-          {{ if (.Site.Params.subTitle) }}
-          <span class="panel-cover__subtitle panel-subtitle">{{ .Site.Params.subTitle }}</span>
-          {{end}}
+          <!-- {{ if (.Site.Params.subTitle) }} -->
+
+          <!-- <span id="subtitle" class="panel-cover__subtitle panel-subtitle">{{ .Site.Params.subTitle }}</span> -->
+          <span id="subtitle" class="panel-cover__subtitle panel-subtitle"></span>
+          <!-- {{end}} -->
+          <script>
+            sub = document.getElementById("subtitle");
+
+            evocations = ["I conjure thee to speak to me",
+            "Wouldst thou like to see the world?",
+            "I will guide thy hand",
+            "What dost thou desire?"];
+
+            max = Math.floor(evocations.length);
+            sub.innerHTML = evocations[Math.floor(Math.random() * (max - 0) + 0)];
+          </script>
           <hr class="panel-cover__divider" />
-          <p class="panel-cover__description">{{ .Site.Params.description }}</p>
+          <p id="description" class="panel-cover__description">{{ .Site.Params.description }}</p>
           <hr class="panel-cover__divider panel-cover__divider--secondary" />
 
           {{if ( .Site.Params.welcomeMessage)}}
-          <p class="panel-cover__description">{{ .Site.Params.welcomeMessage }}</p>
+          <p id="msg" class="panel-cover__description">{{ .Site.Params.welcomeMessage }}</p>
           {{end}}
 
           <div class="navigation-wrapper">
