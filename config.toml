@@ -22,9 +22,9 @@ paginatePath = "page"
 
 [params]
 author = "A94"
-subtitle = "As above, so below"
-description = "Vno Hugo is a port of Vno Jekyll."
-welcomeMessage = "Te la metieeeron!"
+subtitle = "As above, so below" #Deprecated
+description = "Blog, portfolio and project documentation."
+welcomeMessage = "Greetings mortal"
 
 # supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
 coverColor = ""
@@ -41,11 +41,11 @@ repo = ""
 owner = ""
 
 [params.social]
-weibo = "onevcat"
-github = "onevcat"
-twitter = "onevcat"
-gplus = "107108267983477358170"
-mail = "onev@onevcat.com"
+# weibo = "onevcat"
+github = "ambrosino94"
+# twitter = "onevcat"
+# gplus = "107108267983477358170"
+mail = "ambrosinotech@gmail.com"
 
 [params.ga]
 ID = "your_ga_id"
