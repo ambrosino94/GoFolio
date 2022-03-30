@@ -5,6 +5,7 @@ title: "Hello World Vno"
 date: 2021-07-19T07:28:27+08:00
 math: false
 draft: false
+type: post
 ---
 #### What's this
 
@@ -28,4 +29,3 @@ If you want to enable MathJax support, set `math` param in the front matter to `
 #### Background image and avatar
 
 You could replace the background and avatar image in `static/images` folder to change them.
-

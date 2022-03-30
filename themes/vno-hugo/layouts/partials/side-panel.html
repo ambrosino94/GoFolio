@@ -1,16 +1,22 @@
-<header class="panel-cover {{if or (eq .Params.layout "post") (eq .Params.layout "page")}} panel-cover--collapsed {{end}}" style="background-image: url('/images/background-cover.jpg')">
+<header class="panel-cover {{if or (eq .Params.layout "post") (eq .Params.layout "page")}} panel-cover--collapsed {{end}}" style="background-image: url('/images/background-cover.png')">
     <div class="panel-main">
 
       <div class="panel-main__inner panel-inverted">
       <div class="panel-main__content">
 
           <a href="/#home" title="{{ .Site.Title }}" class="blog-button"><img src="/images/avatar.jpg" width="180" alt="{{ .Site.Title }} logo" class="panel-cover__logo logo" /></a>
-          <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for {{ .Site.Title }}" class="blog-button">{{ .Site.Title }}</a></h1>
+          <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for {{ .Site.Title }}" class="blog-button"><span class="titleA">{{ .Site.Params.titleA }}</span><span class="titleB">{{ .Site.Params.titleB }}</span></a></h1>
           <!-- {{ if (.Site.Params.subTitle) }} -->
 
           <!-- <span id="subtitle" class="panel-cover__subtitle panel-subtitle">{{ .Site.Params.subTitle }}</span> -->
+
+          <!-- GO syntax for subtitle is no longer needed due to the inclusion of
+          the following script tag, which is an automatic random subtitle gen. -->
+
           <span id="subtitle" class="panel-cover__subtitle panel-subtitle"></span>
           <!-- {{end}} -->
+
+          <!-- ------------------------------------------------------------- -->
           <script>
             sub = document.getElementById("subtitle");
 
@@ -22,6 +28,8 @@
             max = Math.floor(evocations.length);
             sub.innerHTML = evocations[Math.floor(Math.random() * (max - 0) + 0)];
           </script>
+          <!-- ------------------------------------------------------------- -->
+
           <hr class="panel-cover__divider" />
           <p id="description" class="panel-cover__description">{{ .Site.Params.description }}</p>
           <hr class="panel-cover__divider panel-cover__divider--secondary" />
@@ -36,7 +44,9 @@
                 <ul class="navigation">
                   <li class="navigation__item"><a href="/#blog" title="{{ .Site.Params.blogButton.Title }}" class="blog-button">{{ .Site.Params.blogButton.Title }}</a></li>
                   {{ range .Site.Menus.main }}
-                    <li class="navigation__item"><a href="{{ .URL }}" target="_blank" title="{{ .Name}}">{{ .Name }}</a></li>
+                    <li class="navigation__item">
+                      <a href="{{ .URL }}" title="{{ .Name}}" class="{{ with .Params.class }}{{ . }}{{ end }}">{{ .Name }}</a>
+                    </li>
                   {{ end }}
                 </ul>
               </nav>

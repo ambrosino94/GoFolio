@@ -1,9 +1,9 @@
 {{ define "main" }}
 <div class="main-post-list hidden">
     <ol class="post-list">
-        {{ range .Paginator.Pages }}
+        {{ range where .Paginator.Pages "Type" "post" }}
         <li>
-            <h2 class="post-list__post-title post-title"><a href="{{ .RelPermalink }}" title="访问 {{ .RelPermalink }}">{{ .Title }}</a></h2>
+            <h2 class="post-list__post-title post-title"><a href="{{ .RelPermalink }}" title="{{ .RelPermalink }}">{{ .Title }}</a></h2>
             <p class="excerpt">{{ .Summary | truncate 250 }}&hellip;</p>
             <div class="post-list__meta">
                 <time datetime="{{ .Date.Format " 2006-01-02 15:04:05 -0700 " }}" class="post-list__meta--date date">{{ .Date.Format "2006-01-02" }}</time>
@@ -15,4 +15,54 @@
     </ol>
     {{ partial "pagination.html" . }}
 </div>
+
+<div class="projects-list hidden">
+  <h1>Projects</h1>
+
+  <main class="container">
+    <div class="container__flex-flow">
+      {{ range where .Site.RegularPages "Type" "project"}}
+      <div class="card">
+        <img src="{{ .Params.src }}" alt="">
+      </div>
+      {{ end }}
+      <!-- <div class="card">
+        <img src="https://cdn.pixabay.com/photo/2015/01/08/18/25/desk-593327_960_720.jpg" alt="">
+      </div>
+      <div class="card">
+        <img src="https://cdn.pixabay.com/photo/2016/03/26/13/09/workspace-1280538_960_720.jpg" alt="">
+      </div>
+      <div class="card">
+        <img src="https://cdn.pixabay.com/photo/2016/03/26/13/09/cup-of-coffee-1280537_960_720.jpg" alt="">
+      </div>
+      <div class="card">
+        <img src="https://cdn.pixabay.com/photo/2017/11/27/21/31/computer-2982270_960_720.jpg" alt="">
+      </div>
+      <div class="card">
+        <img src="https://cdn.pixabay.com/photo/2015/06/24/15/45/hands-820272_960_720.jpg" alt="">
+      </div>
+      <div class="card">
+        <img src="https://cdn.pixabay.com/photo/2016/06/28/05/10/laptop-1483974_960_720.jpg" alt="">
+      </div>
+      <div class="card">
+        <img src="https://cdn.pixabay.com/photo/2016/02/17/15/37/laptop-1205256_960_720.jpg" alt="">
+      </div>
+      <div class="card">
+        <img src="https://cdn.pixabay.com/photo/2015/06/24/16/36/office-820390_960_720.jpg" alt="">
+      </div>
+      <div class="card">
+        <img src="https://cdn.pixabay.com/photo/2017/10/10/21/47/laptop-2838921_960_720.jpg" alt="">
+      </div>
+      <div class="card">
+        <img src="https://cdn.pixabay.com/photo/2017/06/23/11/49/laptop-2434393_960_720.jpg" alt="">
+      </div>
+      <div class="card">
+        <img src="https://cdn.pixabay.com/photo/2015/09/04/23/28/wordpress-923188_960_720.jpg" alt="">
+      </div> -->
+    </div>
+  </main>
+
+</div>
+
+
 {{ end }}

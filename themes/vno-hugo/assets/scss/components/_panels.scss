@@ -1,7 +1,7 @@
 // ------------------------------
 // PANEL
 // ------------------------------
-
+@import url('https://fonts.googleapis.com/css2?family=Armata&family=Comfortaa:wght@500&family=Major+Mono+Display&display=swap');
 .panel {
   display: table;
   width: 100%;
@@ -66,6 +66,9 @@
 
   .panel-cover__description {
     margin: 0 30px;
+    font-family: 'Armata';
+    font-style: normal;
+    font-weight: 400;
   }
 
   .panel-cover__divider {
@@ -114,7 +117,27 @@
     text-shadow: 0 1px 1px rgba(000,000,000,.4);
 
     a {
+
+      font-family: 'Major Mono Display';
+      font-style: normal;
       color: #FFF;
+
+    }
+    .titleA {
+      background: linear-gradient(92.46deg, #262626 2.13%, #F5F5F5 130.96%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+    .titleB {
+      background: linear-gradient(45.44deg, #980600 64.76%, rgba(112, 4, 0, 0) 116.27%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+
+
     }
 
   }

@@ -14,18 +14,22 @@ paginatePath = "page"
   [[menu.main]]
     name = "Projects"
     identifier = "projects"
-    url = "http://project.onevcat.com/"
-    weight = 10
+    url = "/#projects"
+    weight = 1
+    [menu.main.params]
+      class = "projects-button"
 
 [taxonomies]
     tag = "tags"
 
 [params]
 author = "A94"
+titleA = "Black"
+titleB = "Phillip"
 subtitle = "As above, so below" #Deprecated
 description = "Blog, portfolio and project documentation."
 welcomeMessage = "Greetings mortal"
-
+custom_css = ["css/custom.css"]
 # supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
 coverColor = ""
 
@@ -46,6 +50,7 @@ github = "ambrosino94"
 # twitter = "onevcat"
 # gplus = "107108267983477358170"
 mail = "ambrosinotech@gmail.com"
+ig = "ambrosino94"
 
 [params.ga]
 ID = "your_ga_id"
@@ -57,4 +62,4 @@ title = "Blog"
 description = "Visit blog"
 
 [permalinks]
-posts = "/:year/:month/:title/"
+posts = "/:month/:year/:title/"
