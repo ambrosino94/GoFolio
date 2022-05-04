@@ -11,13 +11,58 @@ paginatePath = "page"
   home = ["HTML", "RSS"]
 
 [menu]
+
+# Buttons____________________________
   [[menu.main]]
     name = "Projects"
     identifier = "projects"
     url = "/#projects"
     weight = 1
     [menu.main.params]
+      type  = "button"
       class = "projects-button"
+
+# Products___________________________
+  [[menu.main]]
+    name = "TSOL Kenaz"
+    identifier = "tsolkenaz"
+    url = "/geometriques/#tsolkenaz"
+    weight = 1
+    [menu.main.params]
+      series = "T'SOL"
+      model  = "Kenaz"
+      type   = "product"
+
+  [[menu.main]]
+    name = "TSOL Laguz"
+    identifier = "tsollaguz"
+    url = "/geometriques/#tsollaguz"
+    weight = 1
+    [menu.main.params]
+      series = "T'SOL"
+      model  = "Laguz"
+      type   = "product"
+
+  [[menu.main]]
+    name = "TSOL Uruz"
+    identifier = "tsoluruz"
+    url = "/geometriques/#tsoluruz"
+    weight = 1
+    [menu.main.params]
+      series = "T'SOL"
+      model  = "Uruz"
+      type   = "product"
+
+  [[menu.main]]
+    name = "TSOL Algiz"
+    identifier = "tsolalgiz"
+    url = "/geometriques/#tsolalgiz"
+    weight = 1
+    [menu.main.params]
+      series = "T'SOL"
+      model  = "Algiz"
+      type   = "product"
+
 
 [taxonomies]
     tag = "tags"
@@ -25,10 +70,10 @@ paginatePath = "page"
 [params]
 author = "A94"
 titleA = "Black"
-titleB = "Phillip"
+titleB = "PhiλЛip"
 subtitle = "As above, so below" #Deprecated
 description = "Blog, portfolio and project documentation."
-welcomeMessage = "Greetings mortal"
+welcomeMessage = "Greetings traveler"
 custom_css = ["css/custom.css"]
 # supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
 coverColor = ""

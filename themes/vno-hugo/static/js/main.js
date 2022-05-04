@@ -5,6 +5,8 @@ $(document).ready(function() {
     if (location.hash && location.hash == "#blog") return;
     $('.main-post-list').removeClass('hidden');
     $('.projects-list').addClass('hidden');
+    $('.projects-blur').addClass('hidden');
+    $('.projects-blur').css('zIndex', '780');
     if ($('.panel-cover').hasClass('panel-cover--collapsed')) return;
     currentWidth = $('.panel-cover').width();
     if (currentWidth < 960) {
@@ -19,6 +21,7 @@ $(document).ready(function() {
     // If already in blog, return early without animate overlay panel again.
     if (location.hash && location.hash == "#projects") return;
     $('.projects-list').removeClass('hidden');
+    $('.projects-blur').removeClass('hidden');
     $('.main-post-list').addClass('hidden');
     if ($('.panel-cover').hasClass('panel-cover--collapsed')) return;
     currentWidth = $('.panel-cover').width();
@@ -33,6 +36,7 @@ $(document).ready(function() {
   if (window.location.hash && window.location.hash == "#blog") {
     $('.panel-cover').addClass('panel-cover--collapsed');
     $('.projects-list').addClass('hidden');
+    $('.projects-blur').addClass('hidden');
 
     $('.main-post-list').removeClass('hidden');
 
@@ -43,6 +47,7 @@ $(document).ready(function() {
     $('.main-post-list').addClass('hidden');
 
     $('.projects-list').removeClass('hidden');
+    $('.projects-blur').removeClass('hidden');
   }
 
   if (window.location.pathname.substring(0, 5) == "/tag/") {
@@ -76,3 +81,37 @@ $(document).ready(function() {
     $('.btn-mobile-menu__icon').toggleClass('fa fa-list fa fa-angle-up animated fadeIn');
   });
 });
+
+
+var Samesies = function() {
+  console.log('yoo');
+  var blur=$('.projects-blur').css('height');
+  var wrapper=$('.content-wrapper').css('height');
+
+
+  if(blur < wrapper){
+    $('.projects-blur').css('height', wrapper);
+  }
+
+  if ($(window).width()>810 && window.location.hash == "#projects") {
+    if ($('.projects-blur').hasClass('hidden')){
+      $('.projects-blur').removeClass('hidden');
+    }
+
+  }  else {
+    $('.projects-blur').addClass('hidden');
+  }
+  console.log($(window).width()>810);
+
+  console.log($('.projects-blur').hasClass('hidden'));
+};
+
+setInterval(Samesies, 500); // call every 1000 milliseconds
+
+// var blur=document.getElementById('projects-blur').style.height;
+// var wrapper=document.getElementById('content-wrapper').style.height;
+// if(wrapper != blur)
+// {
+//   console.log('heeere');
+//   document.getElementById('projects-blur').style.height=wrapper;
+// }

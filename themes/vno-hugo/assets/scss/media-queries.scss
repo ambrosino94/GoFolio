@@ -40,7 +40,7 @@
 // < 960px
 // ------------------------------
 
-@media all and (max-width: 960px) {
+@media all and (max-width: 810px) {
 
   .btn-mobile-menu {
     display: block;
@@ -89,7 +89,8 @@
       }
 
       .panel-cover__logo {
-        width: 60px;
+        width: 30%;
+        height:30%;
         border-width: 2px;
       }
 
@@ -178,7 +179,7 @@
 // < 340px
 // ------------------------------
 
-@media all and (max-width: 340px) {
+@media all and (max-width: 375px) {
 
   .panel-main__inner {
     padding: 0 5%;
@@ -198,6 +199,11 @@
     margin-bottom: .4em;
   }
 
+  .panel-cover__logo {
+    width: 20%;
+    height:20%;
+    // border-width: 2px;
+  }
 }
 
 // ------------------------------

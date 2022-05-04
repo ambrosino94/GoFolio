@@ -5,7 +5,7 @@
       <div class="panel-main__content">
 
           <a href="/#home" title="{{ .Site.Title }}" class="blog-button"><img src="/images/avatar.jpg" width="180" alt="{{ .Site.Title }} logo" class="panel-cover__logo logo" /></a>
-          <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for {{ .Site.Title }}" class="blog-button"><span class="titleA">{{ .Site.Params.titleA }}</span><span class="titleB">{{ .Site.Params.titleB }}</span></a></h1>
+          <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for {{ .Site.Title }}" class="tittle-button"><span class="titleA">{{ .Site.Params.titleA }}</span><span class="titleB">{{ .Site.Params.titleB }}</span></a></h1>
           <!-- {{ if (.Site.Params.subTitle) }} -->
 
           <!-- <span id="subtitle" class="panel-cover__subtitle panel-subtitle">{{ .Site.Params.subTitle }}</span> -->
@@ -43,10 +43,11 @@
               <nav class="cover-navigation cover-navigation--primary">
                 <ul class="navigation">
                   <li class="navigation__item"><a href="/#blog" title="{{ .Site.Params.blogButton.Title }}" class="blog-button">{{ .Site.Params.blogButton.Title }}</a></li>
-                  {{ range .Site.Menus.main }}
-                    <li class="navigation__item">
-                      <a href="{{ .URL }}" title="{{ .Name}}" class="{{ with .Params.class }}{{ . }}{{ end }}">{{ .Name }}</a>
-                    </li>
+                  {{ range where .Site.Menus.main ".Params.type" "button"}}
+
+                      <li class="navigation__item">
+                        <a href="{{ .URL }}" title="{{ .Name}}" class="{{ with .Params.class }}{{ . }}{{ end }}">{{ .Name }}</a>
+                      </li>
                   {{ end }}
                 </ul>
               </nav>

@@ -276,10 +276,21 @@ td:last-child {
   margin-left: 30%;
 }
 
+.projects-blur {
+  z-index: 805;
+  position: absolute;
+  width: 70%;
+  min-height: 100%;
+  // margin-left: 30%;
+  background: linear-gradient(90deg, #3E3E3E 10.42%, rgba(86, 86, 86, 0) 100%);
+}
+
   .content-wrapper__inner {
     margin: 0 10%;
     padding: 50px 0;
     max-width: 850px;
+    position: relative;
+    z-index: 810;
   }
 
 .footer {

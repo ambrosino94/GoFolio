@@ -2,6 +2,27 @@
 // PANEL
 // ------------------------------
 @import url('https://fonts.googleapis.com/css2?family=Armata&family=Comfortaa:wght@500&family=Major+Mono+Display&display=swap');
+
+// @font-face {
+//     font-family: 'Alpaca Solidify';
+//     src: url('/static/fonts/AlpacaSolidifyMod2.ttf') format('truetype');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+@font-face {
+    font-family: 'alpaca_solidifyregular';
+    src: url('/fonts/alpacasolidifymod2-webfont.eot');
+    src: url('/fonts/alpacasolidifymod2-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/alpacasolidifymod2-webfont.woff2') format('woff2'),
+         url('/fonts/alpacasolidifymod2-webfont.woff') format('woff'),
+         url('/fonts/alpacasolidifymod2-webfont.ttf') format('truetype'),
+         url('/fonts/alpacasolidifymod2-webfont.svg#alpaca_solidifyregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 .panel {
   display: table;
   width: 100%;
@@ -118,17 +139,23 @@
 
     a {
 
-      font-family: 'Major Mono Display';
+      font-family: 'Armata';
       font-style: normal;
       color: #FFF;
-
     }
+
+    .tittle-button{
+      font-family: 'alpaca_solidifyregular';
+      font-style: normal;
+    }
+
     .titleA {
       background: linear-gradient(92.46deg, #262626 2.13%, #F5F5F5 130.96%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
       text-fill-color: transparent;
+      font-weight: 800px;
     }
     .titleB {
       background: linear-gradient(45.44deg, #980600 64.76%, rgba(112, 4, 0, 0) 116.27%);
@@ -136,6 +163,7 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
       text-fill-color: transparent;
+      font-weight: 800;
 
 
     }
