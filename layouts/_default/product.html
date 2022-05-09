@@ -1,2 +1,142 @@
-<h1 id={{ .Params.id }}> {{ .Title }} </h1>
-{{ .Content }}
+<!DOCTYPE html>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+
+  body {
+    background-color: #3B0000;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  #constructionWrapper {
+      display: inline-block;
+      max-width: 300px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #fff;
+    }
+
+    #constructionLogo {
+      <!-- display: inline-block; -->
+      <!-- background-image: url('/images/GeometriquesLogo.svg') ; -->
+      margin: 0 auto 30px;
+      max-width: 120%;
+      min-width: 100%;
+      height: auto;
+
+    }
+
+    <!-- #constructionLogo:before {
+      display: block;
+      background-image: url('/images/GeometriquesLogo.svg');
+      margin: 0 auto 30px;
+      font-size: 48px;
+    } -->
+
+    #typed-wrapper {
+      font-size: 20px;
+      color: #FEFEFE;
+      text-align: center;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+
+    .cf:before,
+    .cf:after {
+      content: " ";
+      display: table;
+    }
+
+    .cf:after {
+      clear: both;
+    }
+
+    .typed-cursor {
+      display: inline-block;
+      margin-left: -8px;
+
+      opacity: 1;
+      -webkit-animation: blink 0.7s infinite;
+      -moz-animation: blink 0.7s infinite;
+      animation: blink 0.7s infinite;
+    }
+
+    @keyframes blink {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @-webkit-keyframes blink {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @-moz-keyframes blink {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+</style>
+
+<!-- <h1 id={{ .Params.id }}> {{ .Title }} </h1>
+{{ .Content }} -->
+
+<div id="constructionWrapper">
+  <img id="constructionLogo" src="/images/GeometriquesLogo.svg">
+  <div id="typed-wrapper" class="cf">
+    <span id="typed">
+    				<span class="sr-only">Under construction...</span>
+  </div>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
+<script>
+  $(function() {
+    var $typed = $("#typed");
+    $typed.typed({
+      strings: [$typed.text()],
+      typeSpeed: 50,
+      startDelay: 1000
+    });
+  });
+</script>

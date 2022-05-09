@@ -108,6 +108,16 @@ var Samesies = function() {
 
 setInterval(Samesies, 500); // call every 1000 milliseconds
 
+// Custom
+// $(function() {
+//   var $typed = $("#typed");
+//   $typed.typed({
+//     strings: [$typed.text()],
+//     typeSpeed: 50,
+//     startDelay: 1000
+//   });
+// });
+
 // var blur=document.getElementById('projects-blur').style.height;
 // var wrapper=document.getElementById('content-wrapper').style.height;
 // if(wrapper != blur)
