@@ -1,0 +1,21 @@
+name: GStarted
+
+on: 
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Env Secrets
+        env:
+          SNIPCART_KEY: ${{ secrets.SNIPCARTKEY }}
+        run:
+          echo $SNIPCART_KEY | base64 -d > $RUNNER_TEMP/my_production.keystore
+    
