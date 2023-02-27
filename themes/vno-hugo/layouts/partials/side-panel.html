@@ -19,7 +19,7 @@
           <!-- ------------------------------------------------------------- -->
           <script>
 
-            console.log(process.env.SNIPCART_KEY)
+            console.log({{ os.Getenv "SNIPCART_KEY" }})
 
             sub = document.getElementById("subtitle");
 
