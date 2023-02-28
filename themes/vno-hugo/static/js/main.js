@@ -84,7 +84,6 @@ $(document).ready(function() {
 
 
 var Samesies = function() {
-  console.log('yoo');
   var blur=$('.projects-blur').css('height');
   var wrapper=$('.content-wrapper').css('height');
 
@@ -101,9 +100,9 @@ var Samesies = function() {
   }  else {
     $('.projects-blur').addClass('hidden');
   }
-  console.log($(window).width()>810);
+  // console.log($(window).width()>810);
 
-  console.log($('.projects-blur').hasClass('hidden'));
+  // console.log($('.projects-blur').hasClass('hidden'));
 };
 
 setInterval(Samesies, 500); // call every 1000 milliseconds
