@@ -18,6 +18,6 @@ jobs:
           SNIPCART_KEY: test
         run: |
           echo Env test
-          export SNIPCART_ENVKEY=SNIPCART_KEY  
-          hugo
+
+          
     
