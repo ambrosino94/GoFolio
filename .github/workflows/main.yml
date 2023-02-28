@@ -16,4 +16,6 @@ jobs:
       - name: Env Secrets
         env:
           SNIPCART_KEY: test
+        run: 
+          echo Env test
     
