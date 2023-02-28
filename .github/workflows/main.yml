@@ -17,4 +17,4 @@ jobs:
         env:
           SNIPCART_KEY: "test"
         run:
-          echo Env test
+          echo env test
