@@ -39,6 +39,16 @@
           <p id="msg" class="panel-cover__description">{{ .Site.Params.welcomeMessage }}</p>
           {{end}}
 
+
+          <div class="header__cart">
+            <a href="#" class="snipcart-checkout" style="text-decoration: none;">
+              <div class="snipcart-summary">
+                <span>🛒</span>
+                <span class="snipcart-total-price"></span>
+              </div>
+            </a>
+          </div>
+
           <div class="navigation-wrapper">
             <div>
               <nav class="cover-navigation cover-navigation--primary">
@@ -56,6 +66,10 @@
 
             <div>{{ partial "social.html" . }}</div>
           </div>
+
+
+
+
         </div>
       </div>
 

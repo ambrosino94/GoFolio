@@ -64,5 +64,15 @@
 
 </div>
 
+<div class="shop-list hidden">
+  <h1>Shop</h1>
+  <main class="products">
+  {{ range .Site.Data.products }}
+    {{ partial "products" . }}
+  {{ end }}
+  </main>
+
+
+</div>
 
 {{ end }}

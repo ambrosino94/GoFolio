@@ -35,6 +35,14 @@ paginatePath = "page"
       type  = "button"
       class = "projects-button"
 
+  [[menu.main]]
+    name = "Shop"
+    identifier = "shop"
+    url = "/#shop"
+    weight = 1
+    [menu.main.params]
+      type  = "button"
+      class = "shop-button"
 # Products___________________________
   [[menu.main]]
     name = "TSOL Kenaz"

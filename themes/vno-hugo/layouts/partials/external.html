@@ -22,6 +22,10 @@
 <link rel="preconnect" href="https://app.snipcart.com">
 <link rel="preconnect" href="https://cdn.snipcart.com">
 <link rel="stylesheet" type="text/css" href="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.css" />
+{{ with resources.Get "sass/main.scss" }}
+        {{ $style := . | resources.ToCSS }}
+  <link rel="stylesheet" href="{{ $style.Permalink | relURL }}" type="text/css">
+{{ end }}
 
 <script>
   window.SnipcartSettings = {

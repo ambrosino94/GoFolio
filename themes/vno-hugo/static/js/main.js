@@ -1,12 +1,11 @@
 $(document).ready(function() {
 
   $('a.blog-button').click(function() {
-    // If already in blog, return early without animate overlay panel again.
     if (location.hash && location.hash == "#blog") return;
-    $('.main-post-list').removeClass('hidden');
-    $('.projects-list').addClass('hidden');
-    $('.projects-blur').addClass('hidden');
+    $('.main-post-list').toggleClass('hidden');
+    $('.projects-list, .projects-blur, .shop-list').addClass('hidden');
     $('.projects-blur').css('zIndex', '780');
+
     if ($('.panel-cover').hasClass('panel-cover--collapsed')) return;
     currentWidth = $('.panel-cover').width();
     if (currentWidth < 960) {
@@ -15,14 +14,31 @@ $(document).ready(function() {
       $('.panel-cover').css('max-width',currentWidth);
       $('.panel-cover').animate({'max-width': '700px', 'width': '30%'}, 400, swing = 'swing', function() {} );
     }
+
+  });
+
+  $('a.shop-button').click(function() {
+    if (location.hash && location.hash == "#shop") return;
+    $('.shop-list').toggleClass('hidden');
+    $('.projects-list, .projects-blur, .main-post-list').addClass('hidden');
+    $('.projects-blur').css('zIndex', '780');
+
+    if ($('.panel-cover').hasClass('panel-cover--collapsed')) return;
+    currentWidth = $('.panel-cover').width();
+    if (currentWidth < 960) {
+      $('.panel-cover').addClass('panel-cover--collapsed');
+    } else {
+      $('.panel-cover').css('max-width',currentWidth);
+      $('.panel-cover').animate({'max-width': '700px', 'width': '30%'}, 400, swing = 'swing', function() {} );
+    }
+
   });
 
   $('a.projects-button').click(function() {
-    // If already in blog, return early without animate overlay panel again.
     if (location.hash && location.hash == "#projects") return;
-    $('.projects-list').removeClass('hidden');
-    $('.projects-blur').removeClass('hidden');
-    $('.main-post-list').addClass('hidden');
+    $('.projects-list, projects-blur').toggleClass('hidden');
+    $('.shop-list, .main-post-list').addClass('hidden');
+
     if ($('.panel-cover').hasClass('panel-cover--collapsed')) return;
     currentWidth = $('.panel-cover').width();
     if (currentWidth < 960) {
@@ -31,24 +47,39 @@ $(document).ready(function() {
       $('.panel-cover').css('max-width',currentWidth);
       $('.panel-cover').animate({'max-width': '700px', 'width': '30%'}, 400, swing = 'swing', function() {} );
     }
+
   });
 
-  if (window.location.hash && window.location.hash == "#blog") {
-    $('.panel-cover').addClass('panel-cover--collapsed');
-    $('.projects-list').addClass('hidden');
-    $('.projects-blur').addClass('hidden');
 
-    $('.main-post-list').removeClass('hidden');
-
-  }
-
-  if (window.location.hash && window.location.hash == "#projects") {
-    $('.panel-cover').addClass('panel-cover--collapsed');
-    $('.main-post-list').addClass('hidden');
-
-    $('.projects-list').removeClass('hidden');
-    $('.projects-blur').removeClass('hidden');
-  }
+  // if (window.location.hash && window.location.hash == "#blog") {
+  //   $('.panel-cover').addClass('panel-cover--collapsed');
+  //   $('.projects-list').addClass('hidden');
+  //   $('.projects-blur').addClass('hidden');
+  //   $('.shop-list').addClass('hidden');
+  //
+  //   $('.main-post-list').removeClass('hidden');
+  //
+  // }
+  //
+  // if (window.location.hash && window.location.hash == "#shop") {
+  //   $('.shop-list').removeClass('hidden');
+  //
+  //   $('.panel-cover').addClass('panel-cover--collapsed');
+  //   $('.projects-list').addClass('hidden');
+  //   $('.projects-blur').addClass('hidden');
+  //   $('.main-post-list').addClass('hidden');
+  //
+  //
+  // }
+  //
+  // if (window.location.hash && window.location.hash == "#projects") {
+  //   $('.panel-cover').addClass('panel-cover--collapsed');
+  //   $('.main-post-list').addClass('hidden');
+  //   $('.shop-list').addClass('hidden');
+  //
+  //   $('.projects-list').removeClass('hidden');
+  //   $('.projects-blur').removeClass('hidden');
+  // }
 
   if (window.location.pathname.substring(0, 5) == "/tag/") {
     $('.panel-cover').addClass('panel-cover--collapsed');
