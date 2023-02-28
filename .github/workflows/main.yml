@@ -15,6 +15,15 @@ jobs:
 
       - name: Env Secrets
         env:
+<<<<<<< HEAD
           SNIPCART_KEY: "test"
         run:
           echo env test
+=======
+          SNIPCART_KEY: test
+        run: |
+          echo Env test
+
+          
+    
+>>>>>>> 57150a339bf6f4b22e2ad37836e019e4d6e7d0a6
