@@ -15,5 +15,5 @@ jobs:
       
       - name: Env Secrets
         env:
-          SNIPCART_KEY: ${{ secrets.SNIPCARTKEY }}
+          SNIPCART_KEY: test
     
