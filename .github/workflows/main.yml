@@ -16,6 +16,8 @@ jobs:
       - name: Env Secrets
         env:
           SNIPCART_KEY: test
-        run: 
+        run: |
           echo Env test
+          export SNIPCART_ENVKEY = SNIPCART_KEY  
+          hugo
     
