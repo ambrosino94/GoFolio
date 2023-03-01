@@ -1,8 +1,8 @@
 [
   {
     "id": "STRATUS",
-    "name": "Stratus",
-    "price": 9.95,
+    "name": "Stratus Cheap",
+    "price": 1.00,
     "image": "https://cdn.pixabay.com/photo/2015/01/08/18/25/desk-593327_960_720.jpg",
     "description": "Unlimited low, low clouds for one low, low price!",
     "product_url": "/"
