@@ -75,7 +75,7 @@
 }
 
 .snipcart-modal__container {
-  z-index: 2000;
+  z-index: 2000 !important;
 }
 
 /* .snipcart-modal__container.snipcart-layout--large {
