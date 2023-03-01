@@ -111,6 +111,9 @@ $(document).ready(function() {
 
     $('.btn-mobile-menu__icon').toggleClass('fa fa-list fa fa-angle-up animated fadeIn');
   });
+
+  $('.snipcart-modal__container').appendTo("body")
+
 });
 
 
