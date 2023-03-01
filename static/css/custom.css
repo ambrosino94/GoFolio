@@ -73,3 +73,15 @@
 .card:hover img {
   transform: scale(1.2);
 }
+
+/* .snipcart-modal__container {
+  width: 35% !important;
+  max-width: 540px !important;
+  margin-left: auto !important;
+  right: 0 !important;
+}
+
+.snipcart-modal__container.snipcart-layout--large {
+  width: 100% !important;
+  max-width: 100% !important;
+} */
