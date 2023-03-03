@@ -1,12 +1,13 @@
 $(document).ready(function() {
 
 
-  $('a.snipcart-base-button').click(function() {
+  $('.snipcart-base-button').click(function() {
 
-    const modalInput = document.getElementById('address2_d5425f9d-cf2d-4799-9020-c44e4b0c7e8d');
+    const modalInput = $('address2_d5425f9d-cf2d-4799-9020-c44e4b0c7e8d');
 
     // ✅ Remove CSS properties
-    modalInput.style.removeProperty('width');
+    console.log(modalInput);
+    $modalInput.removeProp("width");
 
   });
 
