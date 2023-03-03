@@ -5,7 +5,7 @@
     "price": 1.00,
     "image": "https://cdn.pixabay.com/photo/2015/01/08/18/25/desk-593327_960_720.jpg",
     "description": "Unlimited low, low clouds for one low, low price!",
-    "product_url": "/"
+    "product_url": "/#shop"
   },
   {
     "id": "STRATUS",
@@ -13,6 +13,6 @@
     "price": 1.00,
     "image": "https://cdn.pixabay.com/photo/2016/03/26/13/09/workspace-1280538_960_720.jpg",
     "description": "Unlimited low, low clouds for one low, low price!",
-    "product_url": "/"
+    "product_url": "/#shop"
   }
 ]
