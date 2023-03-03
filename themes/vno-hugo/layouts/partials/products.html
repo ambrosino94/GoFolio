@@ -1,3 +1,6 @@
+
+{{ $styles := resources.Get "static/css/custom.css"}}
+{{- $.Page.Resources.Add "stylesheet" $styles -}}
 <div class="product">
   <h2 class="product__name">{{ .name }}</h2>
   {{ with .image }}
