@@ -1,15 +1,15 @@
 $(document).ready(function() {
 
 
-  $('.snipcart-base-button').click(function() {
-
-    const modalInput = $('address2_d5425f9d-cf2d-4799-9020-c44e4b0c7e8d');
-
-    // ✅ Remove CSS properties
-    console.log(modalInput);
-    $modalInput.removeProp("width");
-
-  });
+  // $('.snipcart-base-button').click(function() {
+  //
+  //   const modalInput = $('address2_d5425f9d-cf2d-4799-9020-c44e4b0c7e8d');
+  //
+  //   // ✅ Remove CSS properties
+  //   console.log(modalInput);
+  //   $modalInput.removeProp("width");
+  //
+  // });
 
 
   $('a.blog-button').click(function() {
