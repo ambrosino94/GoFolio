@@ -9,6 +9,17 @@
   <p class="product__description">{{ .description }}</p>
   <div class="product__button-container">
     <div class="product__price">${{ .price }}</div>
+
+    <!-- <label>Quantity</label>
+    <input id="quantity" type="number"></input
+    <label>Frame color</label>
+    <select id="frame_color">
+      <option value="Black">Black</option>
+      <option value="Brown">Brown</option>
+      <option value="Gold">Gold</option>
+    </select> -->
+
+
     <button
       class="snipcart-add-item buy-button"
       data-item-id="{{ .id }}"
