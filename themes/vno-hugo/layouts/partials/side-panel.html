@@ -50,13 +50,24 @@
           </div> -->
 
           <div class="fixed-button header__cart ">
-            <a href="#" class="snipcart-checkout" style="text-decoration: none;">
+            <a href="#" class="snipcart-checkout" style="text-decoration: none; data-price='' ">
               <div class="snipcart-summary">
                 <span></span>
                 <span class="snipcart-total-price"></span>
               </div>
             </a>
           </div>
+
+          <script>
+            // Get the price value from the snipcart-total-price element
+            const priceElement = document.querySelector('.snipcart-total-price');
+            const priceValue = priceElement.textContent.trim();
+
+            // Set the price value as the data-price attribute value
+            const cartButton = document.querySelector('.header__cart a');
+            cartButton.setAttribute('data-price', priceValue);
+          </script>
+
 
           <div class="navigation-wrapper">
             <div>
