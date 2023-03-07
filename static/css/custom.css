@@ -169,7 +169,10 @@
 .header__cart .snipcart-total-price {
   color: #7E2D29;
   font-weight: 700;
-  margin-left: 10px; }
+  margin-left: 10px;
+  margin-left: -180px;
+  margin-top: 30px;
+ }
 
 .products {
   max-width: 1000px;
@@ -285,7 +288,7 @@
   transform: rotate(20deg);
   pointer-events: none; }
 
-  .header__cart::before {
+  /* .header__cart::before {
   content: attr(data-price) !important;
   display: inline-block !important;
   margin-right: 10px !important;
@@ -294,4 +297,4 @@
 
 .snipcart-total-price {
   display: none !important;
-}
+} */
