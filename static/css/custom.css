@@ -284,3 +284,14 @@
   height: 75vh;
   transform: rotate(20deg);
   pointer-events: none; }
+
+  .header__cart::before {
+  content: attr(data-price) !important;
+  display: inline-block !important;
+  margin-right: 10px !important;
+  font-weight: bold !important;
+}
+
+.snipcart-total-price {
+  display: none !important;
+}
