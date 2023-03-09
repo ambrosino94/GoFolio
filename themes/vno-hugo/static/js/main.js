@@ -139,24 +139,24 @@ $(document).ready(function() {
     $('.btn-mobile-menu__icon').toggleClass('fa fa-list fa fa-angle-up animated fadeIn');
   });
 
-  // hide the snipcart total price on page load
-  $('.snipcart-total-price').hide();
-
-  // add click event listener to all navigation links except for the shop link
-  $('.navigation li:not(.shop-button) a').click(function(event) {
-    // hide the snipcart total price
-    $(".snipcart-total-price").stop(true, true).fadeOut(200);
-    // $('.snipcart-total-price').hide();
-  });
-
-  // show the snipcart total price when the shop link is clicked
-  $('.navigation li .shop-button').click(function(event) {
-    // show the snipcart total price
-    event.preventDefault();
-    $(".snipcart-total-price").stop(true, true).fadeIn(200).animate({marginLeft: "10px"}, 50).animate({marginLeft: "-10px"}, 50).animate({marginLeft: "0px"}, 50);
-
-    // $('.snipcart-total-price').show();
-  });
+  // // hide the snipcart total price on page load
+  // $('.snipcart-total-price').hide();
+  //
+  // // add click event listener to all navigation links except for the shop link
+  // $('.navigation li:not(.shop-button) a').click(function(event) {
+  //   // hide the snipcart total price
+  //   $(".snipcart-total-price").stop(true, true).fadeOut(200);
+  //   // $('.snipcart-total-price').hide();
+  // });
+  //
+  // // show the snipcart total price when the shop link is clicked
+  // $('.navigation li .shop-button').click(function(event) {
+  //   // show the snipcart total price
+  //   event.preventDefault();
+  //   $(".snipcart-total-price").stop(true, true).fadeIn(200).animate({marginLeft: "10px"}, 50).animate({marginLeft: "-10px"}, 50).animate({marginLeft: "0px"}, 50);
+  //
+  //   // $('.snipcart-total-price').show();
+  // });
 
 
 });
