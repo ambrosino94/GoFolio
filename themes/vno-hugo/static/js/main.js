@@ -149,7 +149,7 @@ $(document).ready(function() {
   });
 
   // show the snipcart total price when the shop link is clicked
-  $('.shop-button a').click(function(event) {
+  $('.navigation li .shop-button').click(function(event) {
     // show the snipcart total price
     $('.snipcart-total-price').show();
   });
