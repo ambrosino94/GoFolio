@@ -162,9 +162,9 @@ $(document).ready(function() {
   //   // show the snipcart total price
   //   event.preventDefault();
   //   $(".snipcart-total-price").stop(true, true).fadeIn(200).animate({marginLeft: "10px"}, 50).animate({marginLeft: "-10px"}, 50).animate({marginLeft: "0px"}, 50);
-
-    // $('.snipcart-total-price').show();
-  });
+  //
+  //   // $('.snipcart-total-price').show();
+  // });
 
 
 });
