@@ -152,9 +152,9 @@ $(document).ready(function() {
   // show the snipcart total price when the shop link is clicked
   $('.navigation li .shop-button').click(function(event) {
     // show the snipcart total price
-    event.preventDefault();
-    $(".snipcart-total-price").stop(true, true).fadeIn(200).animate({marginLeft: "-150px"}, 50).animate({marginLeft: "-170px"}, 50).animate({marginLeft: "-160px"}, 50);
 
+    $(".snipcart-total-price").stop(true, true).fadeIn(200).animate({marginLeft: "-150px"}, 50).animate({marginLeft: "-170px"}, 50).animate({marginLeft: "-160px"}, 50);
+    event.preventDefault();
     // $('.snipcart-total-price').show();
   });
 
