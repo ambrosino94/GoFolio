@@ -139,6 +139,14 @@ $(document).ready(function() {
     $('.btn-mobile-menu__icon').toggleClass('fa fa-list fa fa-angle-up animated fadeIn');
   });
 
+  if(window.location.href.indexOf("#shop") > -1) {
+    event.preventDefault();
+    $(".snipcart-total-price").stop(true, true).fadeIn(200).animate({marginLeft: "10px"}, 50).animate({marginLeft: "-10px"}, 50).animate({marginLeft: "0px"}, 50);
+
+  } else {
+    $(".snipcart-total-price").stop(true, true).fadeOut(200);
+  }
+
   // // hide the snipcart total price on page load
   // $('.snipcart-total-price').hide();
   //
@@ -154,9 +162,9 @@ $(document).ready(function() {
   //   // show the snipcart total price
   //   event.preventDefault();
   //   $(".snipcart-total-price").stop(true, true).fadeIn(200).animate({marginLeft: "10px"}, 50).animate({marginLeft: "-10px"}, 50).animate({marginLeft: "0px"}, 50);
-  //
-  //   // $('.snipcart-total-price').show();
-  // });
+
+    // $('.snipcart-total-price').show();
+  });
 
 
 });
