@@ -168,10 +168,11 @@
 
 .header__cart .snipcart-total-price {
   color: #7E2D29;
-  font-weight: 700;
+  font-weight: 500;
   margin-left: 10px;
-  margin-left: -180px;
+  margin-left: -160px;
   margin-top: 30px;
+  font-size: 28px;
  }
 
 .products {

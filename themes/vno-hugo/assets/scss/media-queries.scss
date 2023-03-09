@@ -36,7 +36,7 @@
 
 }
 
-.fixed-button {
+.snipcart-summary {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -65,13 +65,13 @@
 }
 
 
-.fixed-button a {
+.snipcart-summary a {
   text-decoration: none;
   color: #fff;
   font-size: 30px;
 }
 
-.fixed-button:hover {
+.snipcart-summary:hover {
   background-image: url('/images/icons/cartH.svg' );
 
   transform: scale(1.1);
@@ -90,7 +90,7 @@
 //   opacity: 0;
 //   transition: opacity 0.3s ease-in-out;
 // }
-.fixed-button:hover:after {
+.snipcart-summary:hover:after {
   opacity: 0.3;
 }
 
