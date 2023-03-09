@@ -113,7 +113,47 @@ $(document).ready(function() {
     $('.btn-mobile-menu__icon').toggleClass('fa fa-list fa fa-angle-up animated fadeIn');
   });
 
-  // $('.snipcart-modal__container').appendTo("body")
+  $('.navigation-wrapper .projects-button').click(function() {
+    if ($('.navigation-wrapper').css('display') == "block") {
+      $('.navigation-wrapper').on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+        $('.navigation-wrapper').toggleClass('visible animated bounceOutUp');
+        $('.navigation-wrapper').off('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend');
+      });
+
+      $('.navigation-wrapper').toggleClass('animated bounceInDown animated bounceOutUp');
+    }
+
+    $('.btn-mobile-menu__icon').toggleClass('fa fa-list fa fa-angle-up animated fadeIn');
+  });
+
+  $('.navigation-wrapper .shop-button').click(function() {
+    if ($('.navigation-wrapper').css('display') == "block") {
+      $('.navigation-wrapper').on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+        $('.navigation-wrapper').toggleClass('visible animated bounceOutUp');
+        $('.navigation-wrapper').off('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend');
+      });
+
+      $('.navigation-wrapper').toggleClass('animated bounceInDown animated bounceOutUp');
+    }
+
+    $('.btn-mobile-menu__icon').toggleClass('fa fa-list fa fa-angle-up animated fadeIn');
+  });
+
+  // hide the snipcart total price on page load
+  $('.snipcart-total-price').hide();
+
+  // add click event listener to all navigation links except for the shop link
+  $('.navigation li:not(.shop-button) a').click(function(event) {
+    // hide the snipcart total price
+    $('.snipcart-total-price').hide();
+  });
+
+  // show the snipcart total price when the shop link is clicked
+  $('.shop-button a').click(function(event) {
+    // show the snipcart total price
+    $('.snipcart-total-price').show();
+  });
+
 
 });
 
