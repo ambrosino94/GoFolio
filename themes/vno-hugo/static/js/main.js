@@ -143,7 +143,7 @@ $(document).ready(function() {
   $('.snipcart-total-price').hide();
 
   // add click event listener to all navigation links except for the shop link
-  $('.navigation li:not(.shop-button)').click(function(event) {
+  $('.navigation li:not(.shop-button) a').click(function(event) {
     // hide the snipcart total price
     $(".snipcart-total-price").stop(true, true).fadeOut(200);
     // $('.snipcart-total-price').hide();
@@ -153,8 +153,8 @@ $(document).ready(function() {
   $('.navigation li .shop-button').click(function(event) {
     // show the snipcart total price
 
-    $(".snipcart-total-price").stop(true, true).fadeIn(200).animate({marginLeft: "-150px"}, 50).animate({marginLeft: "-170px"}, 50).animate({marginLeft: "-160px"}, 50);
-    event.preventDefault();
+    $(".snipcart-total-price").stop(true, true).fadeIn(200).animate({marginLeft: "10px"}, 50).animate({marginLeft: "-10px"}, 50).animate({marginLeft: "-160px"}, 50);
+    // event.preventDefault();
     // $('.snipcart-total-price').show();
   });
 
