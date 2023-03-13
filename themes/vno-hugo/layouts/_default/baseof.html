@@ -25,4 +25,10 @@
 
   {{ partial "external.html" . }}
 
+  <script>
+    document.addEventListener('snipcart.ready', () => {
+      Snipcart.api.session.setLanguage(navigator.language.split('-')[0]);
+    })
+  </script>
+
 </body>
