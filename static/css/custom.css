@@ -290,7 +290,7 @@
   pointer-events: none; }
 
 input{
-  display: contents !important;
+  width: inherit;
 }
   /* .header__cart::before {
   content: attr(data-price) !important;
