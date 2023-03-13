@@ -289,6 +289,9 @@
   transform: rotate(20deg);
   pointer-events: none; }
 
+input{
+  display: contents !important;
+}
   /* .header__cart::before {
   content: attr(data-price) !important;
   display: inline-block !important;
